@@ -6,7 +6,7 @@ export class TodoService {
   private static instance: TodoService
   private readonly API_URL = 'https://jsonplaceholder.typicode.com/todos'
 
-  private constructor() { }
+  private constructor() {}
 
   public static getInstance(): TodoService {
     if (!TodoService.instance) {

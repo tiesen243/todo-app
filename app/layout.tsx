@@ -1,10 +1,9 @@
-import { Providers } from './providers'
-
 import '@/app/globals.css'
 
 import { Geist } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 
+import { Providers } from '@/app/providers'
 import { cn } from '@/lib/utils'
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
@@ -18,14 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(geist.variable, 'font-sans antialiased')}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Providers>{children}</Providers>
-        </ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
