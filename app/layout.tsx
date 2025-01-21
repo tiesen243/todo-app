@@ -1,7 +1,6 @@
 import '@/app/globals.css'
 
 import { Geist } from 'next/font/google'
-import { ThemeProvider } from 'next-themes'
 
 import { Providers } from '@/app/providers'
 import { cn } from '@/lib/utils'
